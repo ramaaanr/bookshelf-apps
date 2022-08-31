@@ -1,0 +1,101 @@
+* {
+    --teal: #66BFBF;
+    --light-teal: #EAF6F6;
+    --red: #FF0063;
+    --gray-teal: #D8E2E2;
+    font-family: 'Anek Telugu',
+        sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+nav {
+    background-color: var(--teal);
+}
+
+.header-icon {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* MAIN */
+main {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+
+
+/* UNIVERSAL BOOKS ITEM */
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.card {
+    width: 100%;
+    margin: .5rem;
+}
+
+.card:hover {
+    background-color: var(--light-teal);
+}
+
+
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-body button {
+    border-radius: 50%;
+}
+
+.book-item {
+    width: 100%;
+}
+
+.bi {
+    font-size: 1.5rem;
+}
+
+.bi:hover {
+    opacity: .8;
+}
+
+.check {
+    color: var(--teal);
+    margin-right: 1rem;
+}
+
+
+.bi-trash-fill {
+    color: var(--red);
+}
+
+.card h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card p {
+    font-size: .8rem;
+    margin: 0;
+}
+
+/* Responsive Size */
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 80vw;
+    }
+}
