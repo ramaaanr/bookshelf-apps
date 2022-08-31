@@ -63,9 +63,7 @@ button {
     width: 100%;
 }
 
-.bi {
-    font-size: 1.5rem;
-}
+
 
 .bi:hover {
     opacity: .8;
@@ -74,17 +72,29 @@ button {
 .check {
     color: var(--teal);
     margin-right: 1rem;
+    font-size: 1.5rem;
 }
 
 
+.bi-calendar {
+    font-size: .8rem;
+}
+
 .bi-trash-fill {
     color: var(--red);
+    font-size: 1.5rem;
 }
 
 .card h1 {
     font-size: 1rem;
     font-weight: 600;
     margin: 0;
+}
+
+.card h2 {
+    font-size: .8rem;
+    margin: 0;
+    font-weight: 600;
 }
 
 .card p {
