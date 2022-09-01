@@ -25,6 +25,11 @@ main {
     margin: 0 auto;
 }
 
+/* FILTER FIELD */
+.card-filter .card-body {
+    padding: 0;
+}
+
 
 
 /* UNIVERSAL BOOKS ITEM */
@@ -38,24 +43,24 @@ button {
     outline: inherit;
 }
 
-.card {
+.accordion-body .card {
     width: 100%;
     margin: .5rem;
 }
 
-.card:hover {
+.accordion-body .card:hover {
     background-color: var(--light-teal);
 }
 
 
 
-.card-body {
+.accordion-body .card-body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.card-body button {
+.accordion-body .card-body button {
     border-radius: 50%;
 }
 

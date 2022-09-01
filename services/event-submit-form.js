@@ -1,8 +1,8 @@
 import { renderBookshelfs } from "../view/render-bookshelfs.js";
 import { saveBook } from "./save-book.js";
 import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
-import { renderFormAddBook } from "../view/render-form-add-book.js";
-const formHandler = document
+import { resetInputField } from "./reset-input-field.js";
+const submitForm = document
   .getElementById("btn-submit")
   .addEventListener("click", (event) => {
     event.preventDefault();
@@ -19,8 +19,8 @@ const formHandler = document
 
     saveBook(book);
     renderBookshelfs(book);
-    renderFormAddBook();
+    resetInputField();
     checkEmptyBookshelf(true);
   });
 
-export { formHandler };
+export { submitForm };

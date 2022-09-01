@@ -57,9 +57,6 @@
                             <div class="col-6 col-md-3">
                                 <div class="form-floating mb-3">
                                     <select class="form-select" id="select-year">
-                                        <option value="2022">2022</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2020">2020</option>
                                     </select>
                                     <label for="input-author">Year</label>
                                 </div>
@@ -71,13 +68,27 @@
                                     value="Simpan">
                             </div>
                             <div class="col-12 col-md-6 my-2">
-                                <input type="submit" class="btn btn-secondary container-fluid" value="Reset">
+                                <input id="btn-reset" type="reset" class="btn btn-secondary container-fluid"
+                                    value="Reset">
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <!-- Features 2 - Unread Book -->
+
+            <!-- Features 2 - Search Box -->
+            <div class="card card-filter">
+                <div class="card-body p-3">
+                    <div class="input-group">
+                        <button class="btn btn-outline-secondary rounded-1" type="button" id="button-addon1"><i
+                                class="bi bi-search"></i></button>
+                        <input type="text" class="form-control" placeholder="Cari Buku"
+                            aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features 3 - Unread Book -->
             <div class="accordion-item shadow-sm">
                 <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -100,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Features 3 - Already-read Book -->
+            <!-- Features 4 - Already-read Book -->
             <div class="accordion-item shadow-sm">
                 <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"

@@ -3,7 +3,6 @@
  * variabel ini digunakan untuk menyimpan data buku
  */
 import { books } from "../models/books.js";
-import { checkEmptyBookshelf } from "../services/check-empty-bookshelf.js";
 import { createBookItem } from "../services/create-book-item.js";
 import { isBookAlreadyInBookshelf } from "../services/is-book-already-In-bookshelf.js";
 

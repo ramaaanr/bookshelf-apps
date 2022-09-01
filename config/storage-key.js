@@ -1,0 +1,3 @@
+const STORAGE_KEY = "BOOKSHELF_APPS";
+
+export { STORAGE_KEY };
