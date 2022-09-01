@@ -12,16 +12,17 @@ import { books } from "../models/books.js";
  * unread - Buku yang belum dibaca atau buku dengan nilai isComplete = false
  * already-read - Buku yang sudah dibaca atau buku dengan nilai isComplete = true
  * */
-import { toggleAlert } from "../services/toggle-alert-books.js";
-import { addBook } from "../services/add-book.js";
-
-const updateView = function () {
+import { toggleAlert } from "../services/event-toggle-alert-books.js";
+import { renderBookshelfs } from "./render-bookshelfs.js";
+import { formHandler } from "../services/event-form-handler.js";
+const renderView = function () {
   if (books.length === 0) {
   } else {
     toggleAlert("unread");
     toggleAlert("already-read");
-    addBook();
+    renderBookshelfs();
   }
+  formHandler;
 };
 
-export { updateView };
+export { renderView };

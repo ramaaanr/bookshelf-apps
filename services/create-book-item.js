@@ -1,25 +1,10 @@
+import { changeBookshelf } from "./event-change-bookshelf.js";
+
 const createBookItem = function (book) {
-  /**
-     *
-     *<div class="card">
-        <div class="card-body">
-            <button class="btn-read">
-                <i class="bi bi-circle check"></i>
-            </button>
-            <div class="book-item">
-                <h1 id="book-title">Judul Buku</h1>
-                <h2 id="book-year">2022</h2>
-                <p id="book-author">Author</p>
-            </div>
-            <button class="btn-remove">
-                 <i class="bi bi-trash-fill"></i>
-            </button>
-        </div>
-     </div>
-     */
   // Card
   const card = document.createElement("div");
   card.className = "card";
+  card.id = book.id;
 
   // CardBody <- Card
   const cardBody = document.createElement("div");
@@ -30,14 +15,13 @@ const createBookItem = function (book) {
   buttonCheck.className = "btn-read;";
   const iconCheck = document.createElement("i");
   iconCheck.className = "bi bi-circle check";
+  buttonCheck.addEventListener("click", () => {
+    changeBookshelf(book.id, book.isComplete);
+    book.isComplete = book.isComplete ? false : true;
+  });
   buttonCheck.appendChild(iconCheck);
 
   // Book Details <- CardBody <- Card
-  //   <div class="book-item">
-  //     <h1 id="book-title">Judul Buku</h1>
-  //     <h2 id="book-year">2022</h2>
-  //     <p id="book-author">Author</p>
-  //   </div>;
   const bookItem = document.createElement("div");
   bookItem.className = "book-item";
 

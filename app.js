@@ -1,3 +1,3 @@
-import { updateView } from "./view/update-view.js";
+import { renderView } from "./view/render-view.js";
 
-updateView();
+renderView();
