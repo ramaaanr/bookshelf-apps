@@ -1,6 +1,7 @@
 import { renderBookshelfs } from "../view/render-bookshelfs.js";
 import { saveBook } from "./save-book.js";
-
+import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
+import { renderFormAddBook } from "../view/render-form-add-book.js";
 const formHandler = document
   .getElementById("btn-submit")
   .addEventListener("click", (event) => {
@@ -18,6 +19,8 @@ const formHandler = document
 
     saveBook(book);
     renderBookshelfs(book);
+    renderFormAddBook();
+    checkEmptyBookshelf(false);
   });
 
 export { formHandler };

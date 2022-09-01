@@ -20,11 +20,4 @@ export const books = [
     year: 2012,
     isComplete: true,
   },
-  {
-    id: 3,
-    title: "Harry Potter Keempat",
-    author: "J.K Rowling",
-    year: 2012,
-    isComplete: true,
-  },
 ];

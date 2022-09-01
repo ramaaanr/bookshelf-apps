@@ -1,3 +1,5 @@
+import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
+
 const changeBookshelf = function (id, isComplete) {
   const newBookShelf = isComplete
     ? document.querySelector(".bookshelf-unready-read")
@@ -7,6 +9,7 @@ const changeBookshelf = function (id, isComplete) {
   const newBookItem = document.getElementById(id);
   originBookItem.remove();
   newBookShelf.appendChild(newBookItem);
+  checkEmptyBookshelf(isComplete);
 };
 
 export { changeBookshelf };

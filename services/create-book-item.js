@@ -1,4 +1,6 @@
-import { changeBookshelf } from "./event-change-bookshelf.js";
+import { changeBookshelf } from "./change-bookshelf.js";
+import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
+import { removeBooks } from "./remove-book.js";
 
 const createBookItem = function (book) {
   // Card
@@ -15,9 +17,19 @@ const createBookItem = function (book) {
   buttonCheck.className = "btn-read;";
   const iconCheck = document.createElement("i");
   iconCheck.className = "bi bi-circle check";
+
   buttonCheck.addEventListener("click", () => {
     changeBookshelf(book.id, book.isComplete);
+    iconCheck.className = "bi bi-circle check";
     book.isComplete = book.isComplete ? false : true;
+  });
+
+  buttonCheck.addEventListener("mouseenter", () => {
+    iconCheck.className = "bi bi-check-circle-fill check";
+  });
+
+  buttonCheck.addEventListener("mouseleave", () => {
+    iconCheck.className = "bi bi-circle check";
   });
   buttonCheck.appendChild(iconCheck);
 
@@ -44,7 +56,20 @@ const createBookItem = function (book) {
   const buttonRemove = document.createElement("button");
   buttonRemove.className = "btn-remove;";
   const iconRemove = document.createElement("i");
-  iconRemove.className = "bi bi-trash-fill";
+  iconRemove.className = "bi bi-trash trash";
+
+  buttonRemove.addEventListener("click", () => {
+    removeBooks(book.id);
+    checkEmptyBookshelf(book.isComplete);
+  });
+
+  buttonRemove.addEventListener("mouseenter", () => {
+    iconRemove.className = "bi bi-trash-fill trash";
+  });
+
+  buttonRemove.addEventListener("mouseleave", () => {
+    iconRemove.className = "bi bi-trash trash";
+  });
   buttonRemove.appendChild(iconRemove);
 
   cardBody.appendChild(buttonCheck);
