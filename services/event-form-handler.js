@@ -20,7 +20,7 @@ const formHandler = document
     saveBook(book);
     renderBookshelfs(book);
     renderFormAddBook();
-    checkEmptyBookshelf(false);
+    checkEmptyBookshelf(true);
   });
 
 export { formHandler };
