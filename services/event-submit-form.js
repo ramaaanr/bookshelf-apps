@@ -19,7 +19,7 @@ const submitForm = document
     book.isComplete = false;
 
     saveBook(book);
-    renderBookshelfs(book);
+    renderBookshelfs();
     resetInputField();
     checkEmptyBookshelf(true);
     saveStorage();

@@ -19,6 +19,7 @@ import { resetForm } from "../services/event-reset-form.js";
 import { renderSelectYear } from "./render-select-year.js";
 import { loadStorage } from "../repository/load-storage.js";
 import { checkEmptyBookshelf } from "../services/check-empty-bookshelf.js";
+import { buttonSearch } from "../services/event-button-search.js";
 const renderView = () => {
   loadStorage();
   if (books.length !== 0) {
@@ -28,6 +29,7 @@ const renderView = () => {
   }
   submitForm;
   resetForm;
+  buttonSearch;
   renderSelectYear();
 };
 

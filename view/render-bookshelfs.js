@@ -8,10 +8,17 @@ import { isBookAlreadyInBookshelf } from "../helper/is-book-already-In-bookshelf
 
 const unreadyReadBookshelf = document.querySelector(".bookshelf-unready-read");
 const alreadyReadBookshelf = document.querySelector(".bookshelf-already-read");
-
-const renderBookshelfs = function () {
+const alertUnreadyReadBookshelf = document.querySelector(".alert-unread");
+const alertAlreadyReadBookshelf = document.querySelector(".alert-already-read");
+const renderBookshelfs = function (search = "") {
+  unreadyReadBookshelf.innerHTML = "";
+  alreadyReadBookshelf.innerHTML = "";
+  unreadyReadBookshelf.appendChild(alertUnreadyReadBookshelf);
+  alreadyReadBookshelf.appendChild(alertAlreadyReadBookshelf);
   for (const book of books) {
-    if (isBookAlreadyInBookshelf(book.id, books.isComplete) === false) {
+    console.log("Cari : " + search);
+    console.log("Status : " + book.title.includes(search));
+    if (book.title.includes(search)) {
       if (book.isComplete == false) {
         unreadyReadBookshelf.appendChild(createBookItem(book));
       } else {
