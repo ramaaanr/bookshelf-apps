@@ -62,6 +62,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="alert alert-danger alert-submit-form d-none" role="alert">
+                            <span><i class="bi bi-exclamation-circle-fill"></i></span> Input harus diisi semua
+                        </div>
                         <div class="row">
                             <div class="col-12 col-md-6 my-2">
                                 <input id="btn-submit" type="submit" class="btn btn-success container-fluid"
@@ -134,7 +137,57 @@
                 </div>
             </div>
         </div>
+
+        <!-- Features 4 - Edit Book -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <div class="offcanvas-title container-fluid d-flex" id="offcanvasRightLabel">
+
+                    <div class="header-icon col-1 p-0"><i class="fs-3 bi bi-pen-fill"></i></div>
+                    <div class="col-11 p-0 fs-4 fw-bold">Edit Buku</div>
+
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="accordion-body form-book">
+                    <div class="form-floating mb-3">
+                        <input type="title" class="form-control" id="edit-title" placeholder="judul">
+                        <label for="edit-title">Judul</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-9">
+                            <div class="form-floating mb-3">
+                                <input type="author" class="form-control" id="edit-author" placeholder="Author">
+                                <label for="edit-author">Author</label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="edit-year">
+                                </select>
+                                <label for="edit-year">Year</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-danger alert-edit-form d-none" role="alert">
+                        <span><i class="bi bi-exclamation-circle-fill"></i></span> Input harus diisi semua
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6 my-2">
+                            <input id="edit-submit" type="submit" class="btn btn-success container-fluid"
+                                value="Simpan">
+                        </div>
+                        <div class="col-12 col-md-6 my-2">
+                            <input id="edit-reset" type="reset" class="btn btn-secondary container-fluid" value="Reset">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
+
 
 
     <script src="app.js" type="module"></script>

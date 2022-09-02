@@ -1,6 +1,7 @@
 import { saveStorage } from "../repository/save-storage.js";
 import { changeBookshelf } from "./change-bookshelf.js";
 import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
+import { editForm } from "./event-edit-form.js";
 import { removeBooks } from "./remove-book.js";
 import { saveBook } from "./save-book.js";
 
@@ -39,6 +40,11 @@ const createBookItem = function (book) {
   // Book Details <- CardBody <- Card
   const bookItem = document.createElement("div");
   bookItem.className = "book-item";
+  bookItem.setAttribute("data-bs-toggle", "offcanvas");
+  bookItem.setAttribute("data-bs-target", "#offcanvasRight");
+  bookItem.addEventListener("click", () => {
+    editForm(book);
+  });
 
   const bookTitle = document.createElement("h1");
   bookTitle.className = "book-title";
