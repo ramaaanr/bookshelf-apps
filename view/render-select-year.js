@@ -5,7 +5,11 @@
  * */
 const renderSelectYear = function () {
   const selectYear = document.getElementById("select-year");
-  const year = new Date().getFullYear();
+  try {
+    const year = new Date().getFullYear();
+  } catch (error) {
+    const year = 2022;
+  }
   for (let i = year + 5; i >= year - 50; i--) {
     const option = document.createElement("option");
     if (i === year) option.selected = true;
