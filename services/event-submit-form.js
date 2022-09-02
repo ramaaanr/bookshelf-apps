@@ -2,6 +2,7 @@ import { renderBookshelfs } from "../view/render-bookshelfs.js";
 import { saveBook } from "./save-book.js";
 import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
 import { resetInputField } from "./reset-input-field.js";
+import { saveStorage } from "../repository/save-storage.js";
 const submitForm = document
   .getElementById("btn-submit")
   .addEventListener("click", (event) => {
@@ -21,6 +22,7 @@ const submitForm = document
     renderBookshelfs(book);
     resetInputField();
     checkEmptyBookshelf(true);
+    saveStorage();
   });
 
 export { submitForm };

@@ -17,12 +17,14 @@ import { submitForm } from "../services/event-submit-form.js";
 import { hidingAlertBookshelf } from "../services/event-hiding-alert-bookshelf.js";
 import { resetForm } from "../services/event-reset-form.js";
 import { renderSelectYear } from "./render-select-year.js";
-const renderView = function () {
-  if (books.length === 0) {
-  } else {
-    hidingAlertBookshelf("unread");
-    hidingAlertBookshelf("already-read");
+import { loadStorage } from "../repository/load-storage.js";
+import { checkEmptyBookshelf } from "../services/check-empty-bookshelf.js";
+const renderView = () => {
+  loadStorage();
+  if (books.length !== 0) {
     renderBookshelfs();
+    checkEmptyBookshelf(true);
+    checkEmptyBookshelf(false);
   }
   submitForm;
   resetForm;

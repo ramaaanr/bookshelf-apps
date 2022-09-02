@@ -1,6 +1,8 @@
+import { saveStorage } from "../repository/save-storage.js";
 import { changeBookshelf } from "./change-bookshelf.js";
 import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
 import { removeBooks } from "./remove-book.js";
+import { saveBook } from "./save-book.js";
 
 const createBookItem = function (book) {
   // Card
@@ -22,6 +24,7 @@ const createBookItem = function (book) {
     changeBookshelf(book.id, book.isComplete);
     iconCheck.className = "bi bi-circle check";
     book.isComplete = book.isComplete ? false : true;
+    saveStorage();
   });
 
   buttonCheck.addEventListener("mouseenter", () => {
@@ -61,6 +64,7 @@ const createBookItem = function (book) {
   buttonRemove.addEventListener("click", () => {
     removeBooks(book.id);
     checkEmptyBookshelf(book.isComplete);
+    saveStorage();
   });
 
   buttonRemove.addEventListener("mouseenter", () => {

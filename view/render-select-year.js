@@ -7,7 +7,6 @@ const renderSelectYear = function () {
     if (i === year) option.selected = true;
     option.value = i;
     option.textContent = i;
-    console.log(i);
     selectYear.appendChild(option);
   }
 };

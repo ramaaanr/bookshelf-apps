@@ -1,4 +1,5 @@
 const isStorageExist = () => {
+  console.log("tes");
   if (typeof Storage === undefined) {
     alert("BROWSER TIDAK MENDUKUNG");
     return false;

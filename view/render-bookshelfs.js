@@ -4,7 +4,7 @@
  */
 import { books } from "../models/books.js";
 import { createBookItem } from "../services/create-book-item.js";
-import { isBookAlreadyInBookshelf } from "../services/is-book-already-In-bookshelf.js";
+import { isBookAlreadyInBookshelf } from "../helper/is-book-already-In-bookshelf.js";
 
 const unreadyReadBookshelf = document.querySelector(".bookshelf-unready-read");
 const alreadyReadBookshelf = document.querySelector(".bookshelf-already-read");
