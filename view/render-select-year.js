@@ -5,7 +5,6 @@
  * */
 const renderSelectYear = function () {
   const selectYear = document.getElementById("select-year");
-
   const year = 2022;
 
   for (let i = year + 5; i >= year - 50; i--) {
