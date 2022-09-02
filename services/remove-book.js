@@ -1,6 +1,13 @@
+/**
+ * *removeBook*
+ * fungsi ini digunakan menyimpan data buku yang diterima dalam parameter
+ * kedalam data books
+ * - parameter:
+ * book - berisi objek buku yang sebelumnya diolah
+ * */
 import { books } from "../models/books.js";
 
-const removeBooks = function (id) {
+const removeBook = function (id) {
   const bookItem = document.getElementById(id);
   bookItem.remove();
 
@@ -11,4 +18,4 @@ const removeBooks = function (id) {
   books.splice(index, 1);
 };
 
-export { removeBooks };
+export { removeBook };

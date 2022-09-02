@@ -1,9 +1,14 @@
+/**
+ * *submitForm*
+ * variabel ini digunakan jika terdapat event click submit pada form input
+ * */
 import { renderBookshelfs } from "../view/render-bookshelfs.js";
 import { saveBook } from "./save-book.js";
 import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
 import { resetInputField } from "./reset-input-field.js";
 import { saveStorage } from "../repository/save-storage.js";
 import { isInputFieldEmpty } from "../helper/is-input-field-empty.js";
+
 const submitForm = document
   .getElementById("btn-submit")
   .addEventListener("click", (event) => {

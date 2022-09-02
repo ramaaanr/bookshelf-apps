@@ -1,3 +1,8 @@
+/**
+ * *renderEditYear*
+ * fungsi ini digunakan untuk melakukan rendering option pada elemen select dalam form edit,
+ * sehingga pilihan dari elemen tersebut menyesuaikan dengan tahun user menggunakan aplikasi
+ * */
 const renderEditYear = function () {
   const editYear = document.getElementById("edit-year");
   const year = new Date().getFullYear();

@@ -1,3 +1,8 @@
+/**
+ * *renderSelectYear*
+ * fungsi ini digunakan untuk melakukan rendering option pada elemen select dalam form input,
+ * sehingga pilihan dari elemen tersebut menyesuaikan dengan tahun user menggunakan aplikasi
+ * */
 const renderSelectYear = function () {
   const selectYear = document.getElementById("select-year");
   const year = new Date().getFullYear();

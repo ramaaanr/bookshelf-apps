@@ -1,9 +1,14 @@
+/**
+ * *createBookItem*
+ * fungsi ini digunakan membuat elemen yang akan menampung data buku yang diterima dalam parameter
+ * - parameter:
+ * book - berisi objek buku yang sebelumnya diolah
+ * */
 import { saveStorage } from "../repository/save-storage.js";
 import { changeBookshelf } from "./change-bookshelf.js";
 import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
 import { editForm } from "./event-edit-form.js";
-import { removeBooks } from "./remove-book.js";
-import { saveBook } from "./save-book.js";
+import { removeBook } from "./remove-book.js";
 
 const createBookItem = function (book) {
   // Card
@@ -68,7 +73,7 @@ const createBookItem = function (book) {
   iconRemove.className = "bi bi-trash trash";
 
   buttonRemove.addEventListener("click", () => {
-    removeBooks(book.id);
+    removeBook(book.id);
     checkEmptyBookshelf(book.isComplete);
     saveStorage();
   });

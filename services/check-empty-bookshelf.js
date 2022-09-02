@@ -1,5 +1,12 @@
-import { showAlertBookshelf } from "./event-show-alert-bookshelf.js";
-import { hidingAlertBookshelf } from "./event-hiding-alert-bookshelf.js";
+/**
+ * *checkEmptyBookShelf*
+ * fungsi ini digunakan melakukan pemeriksaan apakah bookshelf
+ * kosong dan akan menampilkan atau menyembunyikan alert dalam bookshelf
+ * - parameter:
+ * isComplete - berisi data true/false yang akan menjadi penentu bookshelf mana yang akan diperiksa
+ * */
+import { showAlertBookshelf } from "./show-alert-bookshelf.js";
+import { hidingAlertBookshelf } from "./hiding-alert-bookshelf.js";
 const alreadyReadBookshelf = document.querySelector(".bookshelf-already-read");
 const unreadyReadBookshelf = document.querySelector(".bookshelf-unready-read");
 const checkEmptyBookshelf = function (isComplete) {

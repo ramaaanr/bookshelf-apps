@@ -1,3 +1,10 @@
+/**
+ * *editForm*
+ * variabel ini digunakan mengantasi event pada edit (jika user melakukan pengeditan buku)
+ *
+ * - parameter:
+ * book - berisi objek buku yang sebelumnya diolah
+ * */
 import { isEditFieldEmpty } from "../helper/is-edit-field-empty.js";
 import { books } from "../models/books.js";
 import { saveStorage } from "../repository/save-storage.js";
@@ -9,10 +16,14 @@ const editForm = function (book) {
   const editAuthor = document.getElementById("edit-author");
   const editYear = document.getElementById("edit-year");
   const alertEdit = document.querySelector(".alert-edit-form");
+
   renderEditYear();
+
   editAuthor.value = book.author;
   editTitle.value = book.title;
   editYear.value = book.year;
+
+  // Jika Edit Simpan
   document.getElementById("edit-submit").addEventListener("click", (event) => {
     event.preventDefault();
     if (isEditFieldEmpty()) {
@@ -25,11 +36,12 @@ const editForm = function (book) {
       books[index].title = editTitle.value;
       books[index].author = editAuthor.value;
       books[index].year = editYear.value;
-      console.log(books[index]);
       renderBookshelfs();
       saveStorage();
     }
   });
+
+  // Jika Edit Reset
   document.getElementById("edit-reset").addEventListener("click", (event) => {
     editTitle.value = "";
     editAuthor.value = "";

@@ -1,4 +1,10 @@
-import { saveStorage } from "../repository/save-storage.js";
+/**
+ * *changeBookShelf*
+ * fungsi ini digunakan untuk memindahkan buku dalam bookshelf
+ * - parameter:
+ * id - data digunakan untuk menangkap elemen mana yang akan diubah
+ * isComplete - data digunakan untuk menangkap bookshelf
+ * */
 import { checkEmptyBookshelf } from "./check-empty-bookshelf.js";
 
 const changeBookshelf = function (id, isComplete) {

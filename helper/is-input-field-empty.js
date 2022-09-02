@@ -1,3 +1,8 @@
+/**
+ * *isEditFieldEmpty*
+ * fungsi digunakan untuk melakukan pemeriksaan apakah
+ * field input dalam form input data buku kosong
+ * */
 const isInputFieldEmpty = function () {
   const inputTitle = document.getElementById("input-title").value;
   const inputAuthor = document.getElementById("input-author").value;
